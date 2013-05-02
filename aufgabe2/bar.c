@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int gauss(int);
+int gauss(unsigned int);
 
 int main()
 {
