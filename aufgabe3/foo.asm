@@ -1,10 +1,20 @@
 section .text
-global gauss
-gauss: 
-	mov rax, rdi	
-	inc rdi
-	mul rdi
-	mov rdx, 0	
-	mov rdi, 2
-	div rdi
+global fibonacci
+fibonacci: 
+	;mov rax, rdi
+	mov rax, 0
+	mov r9, 1
+	mov r10, 0
+	mov r11, 0  ; index
+loop:
+	mov rax, 0	
+	add rax, r9
+	add rax, r10
+	mov r9, r10
+	mov r10, rax
+	inc r11	
+	cmp rdi, r11
+	je end	
+	jmp loop
+end:
 	ret
