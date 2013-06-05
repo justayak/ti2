@@ -43,7 +43,7 @@ loop:
 	
 	cmp rsi, 9
 	jl eight
-	mov al x01001
+	mov al, 0x9
 	jmp continueLoop
 eight:
 
